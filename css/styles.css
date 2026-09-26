@@ -828,3 +828,9 @@ img.avatar { object-fit: cover; background: var(--muted); }
   .dash-row { grid-template-columns: 1fr; }
   .float-card { display: none; }
 }
+
+/* ---------- Crédito do portfólio ---------- */
+.portfolio-credit { flex-basis: 100%; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 24px; margin-top: 12px; padding-top: 16px; border-top: 1px dashed var(--border); font-size: 0.8125rem; color: var(--muted-foreground); }
+.portfolio-credit strong { color: var(--foreground); font-weight: 600; }
+.credit-links a { color: var(--primary-text); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.credit-links a:hover { text-decoration-thickness: 2px; }
