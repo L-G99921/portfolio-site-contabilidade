@@ -1,0 +1,930 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lastro Contabilidade — Contabilidade com base sólida</title>
+  <meta name="description" content="Contabilidade online para quem empreende: abertura de empresa, troca de contador, impostos e folha com contador dedicado e preço fixo.">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Lastro Contabilidade — Contabilidade com base sólida">
+  <meta property="og:description" content="Contador dedicado no WhatsApp, preço fixo e abertura de empresa grátis. Atendimento 100% online em todo o Brasil.">
+  <meta property="og:image" content="img/equipe-comemorando.jpg">
+
+  <!-- Aplica o tema antes da pintura para evitar flash -->
+  <script>
+    (function () {
+      document.documentElement.classList.add('js');
+      try {
+        var t = localStorage.getItem('lastro-theme');
+        if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== Sprite de ícones (estilo Lucide) ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+      <symbol id="i-message" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8M16 13H8M16 17H8"/></symbol>
+      <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+      <symbol id="i-trending" viewBox="0 0 24 24"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-calculator" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M16 14v4M16 10h.01M12 10h.01M8 10h.01M12 14h.01M8 14h.01M12 18h.01M8 18h.01"/></symbol>
+      <symbol id="i-repeat" viewBox="0 0 24 24"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></symbol>
+      <symbol id="i-stethoscope" viewBox="0 0 24 24"><path d="M11 2v2M5 2v2M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+      <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></symbol>
+      <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+      <symbol id="i-video" viewBox="0 0 24 24"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
+      <symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
+      <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></symbol>
+      <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+      <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7M12 2l8 5H4Z"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+      <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></symbol>
+      <symbol id="i-logo" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="currentColor" stroke="none"/><path d="M8.5 23h15M12 19v-3M16 19v-6M20 19v-9" fill="none" style="stroke:var(--logo-ink)" stroke-width="2.6" stroke-linecap="round"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand" aria-label="Lastro Contabilidade — início">
+        <svg class="brand-mark" aria-hidden="true"><use href="#i-logo"/></svg>
+        <span class="brand-name">Lastro<span class="brand-sub">Contabilidade</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#nichos">Para quem</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#planos">Planos</a>
+        <a href="#faq">Dúvidas</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Alternar tema claro/escuro">
+          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        </button>
+        <a href="#contato" class="btn btn-ghost btn-sm hide-sm">Área do cliente</a>
+        <a href="#contato" class="btn btn-primary btn-sm">Falar com contador</a>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <nav class="container" aria-label="Menu móvel">
+        <a href="#servicos">Serviços</a>
+        <a href="#nichos">Para quem</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#simulador">Simulador</a>
+        <a href="#planos">Planos</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#faq">Dúvidas</a>
+        <a href="#contato" class="btn btn-primary">Falar com contador</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="inicio">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <a href="#simulador" class="pill" data-reveal>
+            <span class="pill-tag">Novo</span>
+            Simule sua economia como PJ
+            <svg class="icon icon-xs" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </a>
+
+          <h1 class="hero-title" data-reveal>
+            <span>Contabilidade</span>
+            <span class="inline-faces" aria-hidden="true">
+              <img src="img/marina-costa.jpg" alt="" width="56" height="56">
+              <img src="img/rodrigo-lima.jpg" alt="" width="56" height="56">
+            </span>
+            <span>com gente de verdade e</span>
+            <span class="text-accent serif">base sólida.</span>
+          </h1>
+
+          <p class="hero-lead" data-reveal>
+            Abrimos sua empresa, cuidamos dos impostos, da folha e das obrigações — com um contador dedicado
+            que responde no WhatsApp e preço fixo a partir de <strong>R$ 79/mês</strong>.
+          </p>
+
+          <div class="hero-ctas" data-reveal>
+            <a href="#contato" data-assunto="abrir" class="btn btn-primary btn-lg">
+              Abrir empresa grátis
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </a>
+            <a href="#contato" data-assunto="trocar" class="btn btn-outline btn-lg">
+              <svg class="icon" aria-hidden="true"><use href="#i-repeat"/></svg>
+              Trocar de contador
+            </a>
+          </div>
+
+          <div class="hero-proof" data-reveal>
+            <div class="avatar-stack" aria-hidden="true">
+              <img class="avatar" src="img/carla-fontes.jpg" alt="" width="36" height="36">
+              <img class="avatar" src="img/thiago-moreira.jpg" alt="" width="36" height="36">
+              <img class="avatar" src="img/larissa-nunes.jpg" alt="" width="36" height="36">
+              <img class="avatar" src="img/eduardo-vieira.jpg" alt="" width="36" height="36">
+            </div>
+            <div>
+              <div class="stars" aria-label="Nota 4,9 de 5">
+                <svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg>
+                <span>4,9</span>
+              </div>
+              <p class="muted small">+1.800 avaliações de empresários no Google</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mockup do painel -->
+        <div class="hero-visual" data-reveal>
+          <div class="dash card">
+            <div class="dash-head">
+              <div class="dash-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              <span class="mono small muted">painel.lastro.com.br</span>
+              <span class="badge badge-success"><span class="dot"></span>Em dia</span>
+            </div>
+
+            <div class="dash-body">
+              <div class="dash-row">
+                <div class="dash-stat">
+                  <span class="muted small">Faturamento · set</span>
+                  <strong class="mono">R$ 48.320</strong>
+                  <span class="delta up">+12,4%</span>
+                </div>
+                <div class="dash-stat">
+                  <span class="muted small">DAS a pagar</span>
+                  <strong class="mono">R$ 2.899</strong>
+                  <span class="muted small">vence 20/10</span>
+                </div>
+              </div>
+
+              <div class="dash-chart">
+                <div class="chart-head">
+                  <span class="small">Receita x Impostos</span>
+                  <span class="muted small">últimos 6 meses</span>
+                </div>
+                <div class="bars" aria-hidden="true">
+                  <div class="bar-col"><span style="--v:52"></span><i style="--v:7"></i><em>abr</em></div>
+                  <div class="bar-col"><span style="--v:61"></span><i style="--v:8"></i><em>mai</em></div>
+                  <div class="bar-col"><span style="--v:58"></span><i style="--v:8"></i><em>jun</em></div>
+                  <div class="bar-col"><span style="--v:72"></span><i style="--v:9"></i><em>jul</em></div>
+                  <div class="bar-col"><span style="--v:80"></span><i style="--v:10"></i><em>ago</em></div>
+                  <div class="bar-col"><span style="--v:92"></span><i style="--v:11"></i><em>set</em></div>
+                </div>
+              </div>
+
+              <ul class="dash-tasks">
+                <li><svg class="icon icon-sm ok" aria-hidden="true"><use href="#i-check-circle"/></svg>Notas fiscais conciliadas<span class="muted small">142</span></li>
+                <li><svg class="icon icon-sm ok" aria-hidden="true"><use href="#i-check-circle"/></svg>Folha e pró-labore processados<span class="muted small">ontem</span></li>
+                <li><svg class="icon icon-sm pending" aria-hidden="true"><use href="#i-clock"/></svg>Guia DAS gerada<span class="badge">pendente</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="float-card float-a card">
+            <span class="float-icon"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-trending"/></svg></span>
+            <div>
+              <span class="muted small">Economia no ano</span>
+              <strong class="mono">R$ 18.420</strong>
+            </div>
+          </div>
+
+          <div class="float-card float-b card">
+            <img class="avatar avatar-sm" src="img/marina-costa.jpg" alt="" width="28" height="28">
+            <div>
+              <strong class="small">Marina, sua contadora</strong>
+              <span class="muted small">"Já enviei sua guia 👍" · 12 min</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Números / confiança ===== -->
+    <section class="stats-band" aria-label="Números da Lastro">
+      <div class="container stats-grid">
+        <div class="stat" data-reveal>
+          <strong><span data-count="2400">2.400</span>+</strong>
+          <span class="muted">empresas atendidas</span>
+        </div>
+        <div class="stat" data-reveal>
+          <strong><span data-count="98">98</span>%</strong>
+          <span class="muted">de retenção de clientes</span>
+        </div>
+        <div class="stat" data-reveal>
+          <strong><span data-count="2">2</span>h</strong>
+          <span class="muted">tempo médio de resposta</span>
+        </div>
+        <div class="stat" data-reveal>
+          <strong><span data-count="12">12</span> anos</strong>
+          <span class="muted">de experiência</span>
+        </div>
+      </div>
+      <div class="container seals" data-reveal>
+        <span class="seal"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-shield"/></svg>Registro CRC ativo</span>
+        <span class="seal"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-lock"/></svg>Adequada à LGPD</span>
+        <span class="seal"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-star"/></svg>4,9 no Google</span>
+        <span class="seal"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-zap"/></svg>100% online, todo o Brasil</span>
+      </div>
+    </section>
+
+    <!-- ===== Serviços (bento) ===== -->
+    <section class="section" id="servicos">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <span class="eyebrow">Serviços</span>
+          <h2>Tudo o que sua empresa precisa, <em class="serif">num só lugar.</em></h2>
+          <p class="muted">Do CNPJ ao planejamento tributário. Você foca no negócio, a gente cuida da burocracia.</p>
+        </header>
+
+        <div class="bento">
+          <article class="bento-card span-2" data-reveal>
+            <div class="bento-text">
+              <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg></span>
+              <h3>Abertura de empresa</h3>
+              <p class="muted">CNPJ, inscrições, alvará e certificado digital. Sem honorário de abertura quando você fica com a gente.</p>
+            </div>
+            <ol class="mini-timeline" aria-label="Etapas da abertura">
+              <li class="done"><span></span>Consulta de viabilidade</li>
+              <li class="done"><span></span>Registro na Junta Comercial</li>
+              <li class="done"><span></span>CNPJ emitido</li>
+              <li class="current"><span></span>Inscrição municipal</li>
+              <li><span></span>Primeira nota fiscal</li>
+            </ol>
+          </article>
+
+          <article class="bento-card" data-reveal>
+            <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></span>
+            <h3>Contabilidade mensal</h3>
+            <p class="muted">Escrituração, balancetes, DRE e todas as obrigações acessórias entregues no prazo.</p>
+          </article>
+
+          <article class="bento-card bento-photo" data-reveal>
+            <img class="bento-img" src="img/documentos-impostos.jpg" alt="Formulários de impostos, calculadora e caneta sobre a mesa" width="400" height="200" loading="lazy">
+            <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-landmark"/></svg></span>
+            <h3>Impostos e planejamento</h3>
+            <p class="muted">Escolhemos o regime certo (Simples, Presumido ou Real) e revisamos todo ano para você não pagar a mais.</p>
+          </article>
+
+          <article class="bento-card span-2" data-reveal>
+            <div class="bento-text">
+              <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+              <h3>Folha de pagamento e pró-labore</h3>
+              <p class="muted">Admissões, férias, 13º, eSocial e FGTS Digital. Holerites direto no app dos colaboradores.</p>
+            </div>
+            <ul class="mini-payroll" aria-label="Exemplo de folha">
+              <li><span class="avatar avatar-sm" style="--h:25">RS</span><span>Rafael Souza</span><span class="mono">R$ 4.200</span><span class="badge badge-success">pago</span></li>
+              <li><span class="avatar avatar-sm" style="--h:210">JP</span><span>Júlia Prado</span><span class="mono">R$ 5.850</span><span class="badge badge-success">pago</span></li>
+              <li><span class="avatar avatar-sm" style="--h:320">AL</span><span>Pró-labore sócio</span><span class="mono">R$ 3.400</span><span class="badge">agendado</span></li>
+            </ul>
+          </article>
+
+          <article class="bento-card" data-reveal>
+            <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-repeat"/></svg></span>
+            <h3>Troca de contador</h3>
+            <p class="muted">Pedimos os documentos ao contador anterior e fazemos a transição sem você parar um dia.</p>
+          </article>
+
+          <article class="bento-card" data-reveal>
+            <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-wallet"/></svg></span>
+            <h3>BPO financeiro</h3>
+            <p class="muted">Contas a pagar e receber, conciliação bancária e fluxo de caixa organizados por nós.</p>
+          </article>
+
+          <article class="bento-card" data-reveal>
+            <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-calculator"/></svg></span>
+            <h3>Imposto de Renda PF</h3>
+            <p class="muted">Declaração dos sócios com revisão de deduções e acompanhamento da malha fina.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Nichos (tabs) ===== -->
+    <section class="section section-muted" id="nichos">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <span class="eyebrow">Para quem</span>
+          <h2>Contadores que entendem o <em class="serif">seu mercado.</em></h2>
+          <p class="muted">Cada nicho tem regras próprias. Nossas equipes são divididas por segmento.</p>
+        </header>
+
+        <div class="tabs" data-reveal>
+          <div class="tab-list" role="tablist" aria-label="Segmentos atendidos">
+            <button role="tab" id="tab-saude" aria-controls="panel-saude" aria-selected="true">
+              <svg class="icon icon-sm" aria-hidden="true"><use href="#i-stethoscope"/></svg>Saúde
+            </button>
+            <button role="tab" id="tab-tech" aria-controls="panel-tech" aria-selected="false" tabindex="-1">
+              <svg class="icon icon-sm" aria-hidden="true"><use href="#i-code"/></svg>Tecnologia
+            </button>
+            <button role="tab" id="tab-comercio" aria-controls="panel-comercio" aria-selected="false" tabindex="-1">
+              <svg class="icon icon-sm" aria-hidden="true"><use href="#i-bag"/></svg>Comércio e e-commerce
+            </button>
+            <button role="tab" id="tab-servicos" aria-controls="panel-servicos" aria-selected="false" tabindex="-1">
+              <svg class="icon icon-sm" aria-hidden="true"><use href="#i-briefcase"/></svg>Prestadores de serviço
+            </button>
+            <button role="tab" id="tab-criadores" aria-controls="panel-criadores" aria-selected="false" tabindex="-1">
+              <svg class="icon icon-sm" aria-hidden="true"><use href="#i-video"/></svg>Criadores de conteúdo
+            </button>
+          </div>
+
+          <div class="tab-panel card" role="tabpanel" id="panel-saude" aria-labelledby="tab-saude">
+            <div>
+              <h3>Médicos, dentistas, psicólogos e clínicas</h3>
+              <p class="muted">Saia do carnê-leão e pague menos imposto com uma PJ bem estruturada, incluindo equiparação hospitalar quando cabe.</p>
+              <ul class="check-list">
+                <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Enquadramento no Fator R para reduzir alíquota</li>
+                <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Recebimento de plantões e convênios via PJ</li>
+                <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Livro-caixa e Receita Saúde em dia</li>
+              </ul>
+            </div>
+            <div class="tab-highlight">
+              <span class="muted small">Economia média por profissional</span>
+              <strong class="mono">até 40%</strong>
+              <span class="muted small">em relação à pessoa física</span>
+            </div>
+          </div>
+
+          <div class="tab-panel card" role="tabpanel" id="panel-tech" aria-labelledby="tab-tech" hidden>
+            <div>
+              <h3>Devs, startups e software houses</h3>
+              <p class="muted">Contratos PJ com empresas do Brasil e do exterior, recebimento em dólar e estrutura pronta para investimento.</p>
+              <ul class="check-list">
+                <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Exportação de serviços com isenção de ISS, PIS e Cofins</li>
+                <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Câmbio e invoices internacionais</li>
+                <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Cap table, vesting e rodada de investimento</li>
+              </ul>
+            </div>
+            <div class="tab-highlight">
+              <span class="muted small">Clientes que recebem do exterior</span>
+              <strong class="mono">+600</strong>
+              <span class="muted small">em 14 moedas diferentes</span>
+            </div>
+          </div>
+
+          <div class="tab-panel card" role="tabpanel" id="panel-comercio" aria-labelledby="tab-comercio" hidden>
+            <div>
+              <h3>Lojas físicas e vendedores online</h3>
+              <p class="muted">Integração com marketplaces e ERPs, controle de estoque e ICMS sem dor de cabeça.</p>
+              <ul class="check-list">
+                <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Substituição tributária e DIFAL</li>
+                <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Conciliação de vendas de marketplaces</li>
+                <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Preparação para a reforma tributária (IBS/CBS)</li>
+              </ul>
+            </div>
+            <div class="tab-highlight">
+              <span class="muted small">Notas fiscais processadas por mês</span>
+              <strong class="mono">+85 mil</strong>
+              <span class="muted small">com conciliação automática</span>
+            </div>
+          </div>
+
+          <div class="tab-panel card" role="tabpanel" id="panel-servicos" aria-labelledby="tab-servicos" hidden>
+            <div>
+              <h3>Consultores, agências, advogados e arquitetos</h3>
+              <p class="muted">Emissão de notas de serviço simplificada e o regime ideal para a sua margem de lucro.</p>
+              <ul class="check-list">
+                <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Comparativo Simples x Lucro Presumido todo ano</li>
+                <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Distribuição de lucros isenta e bem documentada</li>
+                <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Sociedades uniprofissionais com ISS fixo</li>
+              </ul>
+            </div>
+            <div class="tab-highlight">
+              <span class="muted small">Prestadores atendidos</span>
+              <strong class="mono">+900</strong>
+              <span class="muted small">em 26 estados</span>
+            </div>
+          </div>
+
+          <div class="tab-panel card" role="tabpanel" id="panel-criadores" aria-labelledby="tab-criadores" hidden>
+            <div>
+              <h3>Influenciadores, streamers e produtores digitais</h3>
+              <p class="muted">Publis, AdSense, infoprodutos e plataformas estrangeiras declarados do jeito certo.</p>
+              <ul class="check-list">
+                <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>CNAE correto para cada fonte de receita</li>
+                <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Receitas de plataformas internacionais</li>
+                <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Transição de MEI para ME sem susto</li>
+              </ul>
+            </div>
+            <div class="tab-highlight">
+              <span class="muted small">Criadores com CNPJ na Lastro</span>
+              <strong class="mono">+350</strong>
+              <span class="muted small">de nano a mega influenciadores</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Como funciona ===== -->
+    <section class="section" id="como-funciona">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <span class="eyebrow">Como funciona</span>
+          <h2>Comece em 4 passos, <em class="serif">sem sair de casa.</em></h2>
+          <p class="muted">Trocar de contador ou abrir empresa é mais simples do que parece.</p>
+        </header>
+
+        <div class="how-grid">
+          <figure class="photo-card" data-reveal>
+            <img src="img/equipe-comemorando.jpg" alt="Contadora e cliente comemorando resultado em reunião no escritório" width="500" height="550" loading="lazy">
+            <figcaption class="photo-caption card">
+              <span class="float-icon"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-clock"/></svg></span>
+              <span><strong class="small">Troca de contador em média</strong><span class="mono">9 dias</span></span>
+            </figcaption>
+          </figure>
+
+          <ol class="steps">
+            <li class="step" data-reveal>
+              <span class="step-num mono">01</span>
+              <div>
+                <h3>Conversa inicial</h3>
+                <p class="muted">Entendemos seu negócio numa chamada de 20 minutos. Grátis e sem compromisso.</p>
+              </div>
+            </li>
+            <li class="step" data-reveal>
+              <span class="step-num mono">02</span>
+              <div>
+                <h3>Diagnóstico tributário</h3>
+                <p class="muted">Mostramos o regime ideal e quanto você pode economizar, com números.</p>
+              </div>
+            </li>
+            <li class="step" data-reveal>
+              <span class="step-num mono">03</span>
+              <div>
+                <h3>Abertura ou migração</h3>
+                <p class="muted">Cuidamos do CNPJ ou buscamos tudo com o contador anterior. Você só assina.</p>
+              </div>
+            </li>
+            <li class="step" data-reveal>
+              <span class="step-num mono">04</span>
+              <div>
+                <h3>Contador dedicado</h3>
+                <p class="muted">Um especialista com nome e CRC acompanha sua empresa todo mês.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Simulador ===== -->
+    <section class="section section-muted" id="simulador">
+      <div class="container sim-grid">
+        <div class="sim-copy" data-reveal>
+          <span class="eyebrow">Simulador</span>
+          <h2>Quanto você pagaria <em class="serif">como PJ?</em></h2>
+          <p class="muted">Compare o imposto de um prestador de serviço como pessoa física (autônomo) com uma empresa no Simples Nacional com Fator R, já incluindo a nossa mensalidade.</p>
+          <p class="fine muted">Estimativa ilustrativa com tabelas de 2025 (IRPF mensal, INSS e Anexo III do Simples). Não considera dependentes, deduções, ISS municipal nem as mudanças do IR em 2026. O cálculo real é feito no diagnóstico.</p>
+        </div>
+
+        <div class="sim card" data-reveal>
+          <label class="field-label" for="sim-range">Faturamento mensal</label>
+          <div class="sim-input">
+            <span class="mono muted">R$</span>
+            <input id="sim-value" type="text" inputmode="numeric" value="12.000" aria-label="Faturamento mensal em reais">
+          </div>
+          <input id="sim-range" class="range" type="range" min="3000" max="50000" step="500" value="12000">
+          <div class="range-scale muted small mono"><span>R$ 3 mil</span><span>R$ 50 mil</span></div>
+
+          <div class="sim-compare">
+            <div class="sim-col">
+              <span class="muted small">Como pessoa física</span>
+              <strong class="mono" id="sim-pf">—</strong>
+              <div class="meter"><span id="sim-pf-bar"></span></div>
+            </div>
+            <div class="sim-col">
+              <span class="muted small">Como PJ na Lastro</span>
+              <strong class="mono accent" id="sim-pj">—</strong>
+              <div class="meter meter-accent"><span id="sim-pj-bar"></span></div>
+            </div>
+          </div>
+
+          <div class="sim-result" id="sim-result" aria-live="polite">
+            <span class="muted small">Economia estimada por ano</span>
+            <strong class="mono" id="sim-year">—</strong>
+            <span class="small" id="sim-month"></span>
+          </div>
+
+          <a href="#contato" data-assunto="abrir" class="btn btn-primary btn-block">
+            Quero meu diagnóstico gratuito
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Comparativo ===== -->
+    <section class="section" id="comparativo">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <span class="eyebrow">Por que a Lastro</span>
+          <h2>Lastro ou a <em class="serif">dor de cabeça.</em></h2>
+          <p class="muted">A diferença aparece no primeiro mês.</p>
+        </header>
+
+        <div class="versus">
+          <article class="versus-card versus-bad card" data-reveal>
+            <span class="badge">Contabilidade tradicional</span>
+            <h3>Lenta, cara e imprevisível.</h3>
+            <ul class="x-list">
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-x"/></svg>Resposta por e-mail em dias, quando vem</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-x"/></svg>Guias chegam em cima do vencimento</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-x"/></svg>Cobranças extras que você não esperava</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-x"/></svg>Regime tributário que ninguém revisa</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-x"/></svg>Contrato com fidelidade e multa</li>
+            </ul>
+          </article>
+          <article class="versus-card versus-good card" data-reveal>
+            <span class="badge badge-success"><svg class="brand-mark sm" aria-hidden="true"><use href="#i-logo"/></svg>Lastro</span>
+            <h3>Rápida, clara e com preço fixo.</h3>
+            <ul class="check-list">
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>WhatsApp com seu contador em até 2h úteis</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Guias e relatórios na plataforma 24h</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Mensalidade fixa, sem surpresas</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Planejamento tributário revisado todo ano</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Sem fidelidade: cancele quando quiser</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Planos ===== -->
+    <section class="section section-muted" id="planos">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <span class="eyebrow">Planos</span>
+          <h2>Preço justo e <em class="serif">transparente.</em></h2>
+          <p class="muted">Sem taxa de adesão, sem fidelidade. Cancele quando quiser.</p>
+        </header>
+
+        <div class="billing-toggle" role="group" aria-label="Período de cobrança" data-reveal>
+          <button type="button" data-billing="monthly" aria-pressed="true">Mensal</button>
+          <button type="button" data-billing="yearly" aria-pressed="false">Anual <span class="badge badge-success">-15%</span></button>
+        </div>
+
+        <div class="pricing">
+          <article class="plan card" data-reveal>
+            <h3>MEI</h3>
+            <p class="muted small">Para o microempreendedor que quer tudo em dia.</p>
+            <div class="price"><span class="muted">R$</span><strong class="mono" data-price="79">79</strong><span class="muted">/mês</span></div>
+            <p class="price-note muted small" data-note>cobrado mensalmente</p>
+            <a href="#contato" data-assunto="mei" class="btn btn-outline btn-block">Começar agora</a>
+            <ul class="check-list">
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Guia DAS todo mês</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Declaração anual (DASN-SIMEI)</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Suporte na emissão de notas</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Alerta de limite de faturamento</li>
+            </ul>
+          </article>
+
+          <article class="plan plan-featured card" data-reveal>
+            <span class="plan-flag badge badge-solid"><svg class="icon icon-xs" aria-hidden="true"><use href="#i-sparkles"/></svg>Mais escolhido</span>
+            <h3>Essencial</h3>
+            <p class="muted small">Para prestadores de serviço no Simples Nacional.</p>
+            <div class="price"><span class="muted">R$</span><strong class="mono" data-price="249">249</strong><span class="muted">/mês</span></div>
+            <p class="price-note muted small" data-note>cobrado mensalmente</p>
+            <a href="#contato" data-assunto="abrir" class="btn btn-primary btn-block">Escolher Essencial</a>
+            <ul class="check-list">
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Abertura de empresa grátis</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Contador dedicado no WhatsApp</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Pró-labore e folha até 3 funcionários</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Planejamento tributário anual</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Plataforma e app 24h</li>
+            </ul>
+          </article>
+
+          <article class="plan card" data-reveal>
+            <h3>Empresarial</h3>
+            <p class="muted small">Para comércio, Lucro Presumido e equipes maiores.</p>
+            <div class="price"><span class="muted">R$</span><strong class="mono" data-price="549">549</strong><span class="muted">/mês</span></div>
+            <p class="price-note muted small" data-note>cobrado mensalmente</p>
+            <a href="#contato" data-assunto="trocar" class="btn btn-outline btn-block">Falar com especialista</a>
+            <ul class="check-list">
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Tudo do Essencial</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Folha até 15 funcionários</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>BPO financeiro incluso</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Relatórios gerenciais e reunião mensal</li>
+              <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>ICMS, ST e Lucro Presumido</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Depoimentos ===== -->
+    <section class="section" id="depoimentos">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <span class="eyebrow">Depoimentos</span>
+          <h2>Quem trocou <em class="serif">não volta atrás.</em></h2>
+        </header>
+
+        <div class="wall">
+          <figure class="quote card" data-reveal>
+            <div class="stars sm" aria-label="5 estrelas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div>
+            <blockquote>"Eu pagava quase 27% de imposto como autônoma. Com a PJ que a Lastro montou, caiu para menos de 10%. E a Marina responde tudo no WhatsApp."</blockquote>
+            <figcaption><img class="avatar" src="img/carla-fontes.jpg" alt="" width="40" height="40" loading="lazy"><span><strong>Dra. Carla Fontes</strong><span class="muted small">Dermatologista · São Paulo</span></span></figcaption>
+          </figure>
+          <figure class="quote card" data-reveal>
+            <div class="stars sm" aria-label="5 estrelas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div>
+            <blockquote>"Recebo de uma empresa americana e tinha medo de fazer errado. Eles resolveram o câmbio e a exportação de serviço sem complicação."</blockquote>
+            <figcaption><img class="avatar" src="img/thiago-moreira.jpg" alt="" width="40" height="40" loading="lazy"><span><strong>Thiago Moreira</strong><span class="muted small">Engenheiro de software · Recife</span></span></figcaption>
+          </figure>
+          <figure class="quote card" data-reveal>
+            <div class="stars sm" aria-label="5 estrelas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div>
+            <blockquote>"A troca de contador levou 9 dias e eu não precisei ligar para ninguém."</blockquote>
+            <figcaption><img class="avatar" src="img/bruno-alves.jpg" alt="" width="40" height="40" loading="lazy"><span><strong>Bruno Alves</strong><span class="muted small">Agência de marketing · Curitiba</span></span></figcaption>
+          </figure>
+          <figure class="quote card" data-reveal>
+            <div class="stars sm" aria-label="5 estrelas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div>
+            <blockquote>"Tenho loja própria e vendo em três marketplaces. Pela primeira vez sei exatamente quanto sobra no fim do mês."</blockquote>
+            <figcaption><img class="avatar" src="img/larissa-nunes.jpg" alt="" width="40" height="40" loading="lazy"><span><strong>Larissa Nunes</strong><span class="muted small">E-commerce de moda · Belo Horizonte</span></span></figcaption>
+          </figure>
+          <figure class="quote card" data-reveal>
+            <div class="stars sm" aria-label="5 estrelas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div>
+            <blockquote>"Saí do MEI para ME no meio do ano. Eles avisaram antes de eu estourar o limite e fizeram a transição certinha."</blockquote>
+            <figcaption><img class="avatar" src="img/gabi-rocha.jpg" alt="" width="40" height="40" loading="lazy"><span><strong>Gabi Rocha</strong><span class="muted small">Criadora de conteúdo · Rio de Janeiro</span></span></figcaption>
+          </figure>
+          <figure class="quote card" data-reveal>
+            <div class="stars sm" aria-label="5 estrelas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div>
+            <blockquote>"O relatório mensal virou minha ferramenta de gestão. A reunião com o contador vale mais do que a mensalidade."</blockquote>
+            <figcaption><img class="avatar" src="img/eduardo-vieira.jpg" alt="" width="40" height="40" loading="lazy"><span><strong>Eduardo Vieira</strong><span class="muted small">Construtora · Goiânia</span></span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Equipe ===== -->
+    <section class="section section-muted" id="equipe">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <span class="eyebrow">Equipe</span>
+          <h2>Gente de verdade cuidando dos <em class="serif">seus números.</em></h2>
+          <p class="muted">Todos os contadores têm registro ativo no Conselho Regional de Contabilidade.</p>
+        </header>
+
+        <div class="team">
+          <article class="member card" data-reveal>
+            <img class="avatar avatar-lg" src="img/marina-costa.jpg" alt="Retrato de Marina Costa" width="72" height="72" loading="lazy">
+            <h3>Marina Costa</h3>
+            <p class="muted small">Sócia-fundadora · Área de Saúde</p>
+            <span class="badge mono">CRC 1SP-000001/O</span>
+          </article>
+          <article class="member card" data-reveal>
+            <img class="avatar avatar-lg" src="img/rodrigo-lima.jpg" alt="Retrato de Rodrigo Lima" width="72" height="72" loading="lazy">
+            <h3>Rodrigo Lima</h3>
+            <p class="muted small">Sócio · Tecnologia e exportação</p>
+            <span class="badge mono">CRC 1SP-000002/O</span>
+          </article>
+          <article class="member card" data-reveal>
+            <img class="avatar avatar-lg" src="img/patricia-santos.jpg" alt="Retrato de Patrícia Santos" width="72" height="72" loading="lazy">
+            <h3>Patrícia Santos</h3>
+            <p class="muted small">Coordenadora · Comércio e ICMS</p>
+            <span class="badge mono">CRC 1SP-000003/O</span>
+          </article>
+          <article class="member card" data-reveal>
+            <img class="avatar avatar-lg" src="img/andre-oliveira.jpg" alt="Retrato de André Oliveira" width="72" height="72" loading="lazy">
+            <h3>André Oliveira</h3>
+            <p class="muted small">Especialista · Departamento pessoal</p>
+            <span class="badge mono">CRC 1SP-000004/O</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA invertido (estilo ReUI) ===== -->
+    <section class="section cta-band-wrap" aria-label="Chamada para ação">
+      <div class="container">
+        <div class="cta-band" data-reveal>
+          <div class="cta-band-copy">
+            <h2>Sua contabilidade em dia <em class="serif">já no próximo mês.</em></h2>
+            <p>Diagnóstico gratuito, troca sem custo e sem fidelidade. Você só precisa de 20 minutos.</p>
+          </div>
+          <div class="cta-band-actions">
+            <a href="#contato" data-assunto="abrir" class="btn btn-invert btn-lg">
+              Agendar diagnóstico
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </a>
+            <a href="#planos" class="btn btn-invert-ghost btn-lg">Ver planos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section" id="faq">
+      <div class="container faq-grid">
+        <header class="section-head left" data-reveal>
+          <span class="eyebrow">Dúvidas</span>
+          <h2>Perguntas <em class="serif">frequentes</em></h2>
+          <p class="muted">Não achou sua resposta? <a href="#contato" class="link">Fale com um contador</a>.</p>
+        </header>
+
+        <div class="accordion" data-reveal>
+          <details>
+            <summary>Como funciona a troca de contador?<svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+            <div class="acc-body"><p>Você assina o contrato com a gente e nós enviamos a carta de transferência ao seu contador atual. Pegamos toda a documentação, conferimos pendências e assumimos a partir do mês seguinte. Em média leva de 7 a 15 dias.</p></div>
+          </details>
+          <details>
+            <summary>Quanto tempo leva para abrir uma empresa?<svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+            <div class="acc-body"><p>Na maioria das cidades o CNPJ sai em até 10 dias úteis. Prazos de alvará e inscrição municipal dependem da prefeitura, e nós acompanhamos cada etapa por você.</p></div>
+          </details>
+          <details>
+            <summary>Vocês atendem empresas de todo o Brasil?<svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+            <div class="acc-body"><p>Sim. Somos 100% online e atendemos todos os estados. Conhecemos as particularidades de ISS e ICMS de cada região.</p></div>
+          </details>
+          <details>
+            <summary>Existe fidelidade ou multa de cancelamento?<svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+            <div class="acc-body"><p>Não. Você pode cancelar a qualquer momento com 30 dias de aviso, e entregamos toda a sua documentação organizada.</p></div>
+          </details>
+          <details>
+            <summary>MEI precisa de contador?<svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+            <div class="acc-body"><p>Não é obrigatório, mas ajuda a evitar multas, acompanhar o limite de faturamento e planejar a hora certa de virar ME. O plano MEI existe exatamente para isso.</p></div>
+          </details>
+          <details>
+            <summary>Meus dados ficam seguros?<svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+            <div class="acc-body"><p>Sim. Seguimos a LGPD, usamos criptografia na plataforma e o acesso aos seus documentos é restrito à sua equipe de atendimento.</p></div>
+          </details>
+          <details>
+            <summary>Vou falar com um contador de verdade?<svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+            <div class="acc-body"><p>Sempre. Cada empresa tem um contador responsável com nome e registro no CRC. Nada de robô respondendo suas dúvidas tributárias.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contato ===== -->
+    <section class="section section-cta" id="contato">
+      <div class="container contact-grid">
+        <div class="contact-copy" data-reveal>
+          <span class="eyebrow">Contato</span>
+          <h2>Vamos conversar sobre a <em class="serif">sua empresa?</em></h2>
+          <p class="muted">Deixe seus dados e um contador retorna em até 2 horas úteis. O diagnóstico é gratuito.</p>
+
+          <figure class="contact-photo">
+            <img src="img/reuniao-cliente.jpg" alt="Contadora conversando com cliente durante reunião" width="500" height="280" loading="lazy">
+          </figure>
+
+          <ul class="contact-list">
+            <li><span class="icon-box sm"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-message"/></svg></span><span><strong>WhatsApp</strong><span class="muted">(11) 90000-0000</span></span></li>
+            <li><span class="icon-box sm"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-mail"/></svg></span><span><strong>E-mail</strong><span class="muted">contato@lastro.com.br</span></span></li>
+            <li><span class="icon-box sm"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-pin"/></svg></span><span><strong>Escritório</strong><span class="muted">Av. Paulista, 0000 · São Paulo, SP</span></span></li>
+          </ul>
+        </div>
+
+        <div class="card form-card" data-reveal>
+          <form id="lead-form" novalidate>
+            <div class="field">
+              <label for="f-nome">Nome</label>
+              <input id="f-nome" name="nome" type="text" autocomplete="name" placeholder="Seu nome completo" required>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-email">E-mail</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" placeholder="voce@empresa.com" required>
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="f-tel">WhatsApp</label>
+                <input id="f-tel" name="telefone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(11) 90000-0000" required>
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-assunto">Como podemos ajudar?</label>
+              <div class="select-wrap">
+                <select id="f-assunto" name="assunto" required>
+                  <option value="">Selecione uma opção</option>
+                  <option value="abrir">Quero abrir uma empresa</option>
+                  <option value="trocar">Quero trocar de contador</option>
+                  <option value="mei">Sou MEI</option>
+                  <option value="outro">Outro assunto</option>
+                </select>
+                <svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+              </div>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="f-msg">Mensagem <span class="muted">(opcional)</span></label>
+              <textarea id="f-msg" name="mensagem" rows="3" placeholder="Conte um pouco sobre o seu negócio"></textarea>
+            </div>
+            <label class="checkbox">
+              <input type="checkbox" name="lgpd" required>
+              <span>Concordo em ser contatado e com a <a href="#" class="link">política de privacidade</a>.</span>
+            </label>
+            <span class="field-error" data-for="lgpd" aria-live="polite"></span>
+            <button type="submit" class="btn btn-primary btn-block btn-lg">
+              Quero falar com um contador
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </button>
+            <p class="fine muted center"><svg class="icon icon-xs" aria-hidden="true"><use href="#i-lock"/></svg> Seus dados estão protegidos. Não enviamos spam.</p>
+          </form>
+
+          <div class="form-success" id="form-success" hidden tabindex="-1">
+            <span class="success-icon"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>
+            <h3>Recebemos seu contato!</h3>
+            <p class="muted">Um contador vai falar com você em até 2 horas úteis. Se preferir, adiante a conversa pelo WhatsApp.</p>
+            <a class="btn btn-outline" id="wa-link" href="#" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-message"/></svg>
+              Continuar no WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Rodapé ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#inicio" class="brand" aria-label="Lastro Contabilidade — início">
+          <svg class="brand-mark" aria-hidden="true"><use href="#i-logo"/></svg>
+          <span class="brand-name">Lastro<span class="brand-sub">Contabilidade</span></span>
+        </a>
+        <p class="muted small">Contabilidade online com contador dedicado para quem empreende em todo o Brasil.</p>
+      </div>
+      <div>
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#servicos">Abertura de empresa</a></li>
+          <li><a href="#servicos">Troca de contador</a></li>
+          <li><a href="#servicos">Folha de pagamento</a></li>
+          <li><a href="#servicos">BPO financeiro</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#equipe">Equipe</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li class="muted">(11) 90000-0000</li>
+          <li class="muted">contato@lastro.com.br</li>
+          <li class="muted">Seg a sex, 8h às 18h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p class="muted small">© <span id="year">2026</span> Lastro Contabilidade Ltda · CNPJ 00.000.000/0001-00 · CRC 2SP-000000/O-0</p>
+      <p class="muted small">Empresa fictícia criada para portfólio.</p>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante WhatsApp -->
+  <a href="#contato" class="fab" aria-label="Fale conosco pelo WhatsApp">
+    <svg class="icon" aria-hidden="true"><use href="#i-message"/></svg>
+  </a>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
